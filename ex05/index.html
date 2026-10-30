@@ -10,20 +10,16 @@
   <h1>Caixa do mercado</h1>
   <p><a href="../index.html">← Voltar</a> · Seu Nome</p>
 
-  <label for="itens">Preços dos itens (um por linha)</label>
-  <textarea id="itens" rows="8" cols="20"></textarea>
-
-  <label for="cupom">Cupom de desconto</label>
-  <input type="text" id="cupom">
-
-  <label>
-    <input type="checkbox" id="fidelidade">
-    Cliente do clube de fidelidade (5%)
-  </label>
-
-  <button id="fechar">Fechar compra</button>
-
-  <div id="resultado"></div>
+  <form id="formulario">
+            <div class="campo"><label for="precos">Preços dos produtos (um por linha)</label><textarea id="precos"
+                    placeholder="12,50&#10;8.90&#10;25,00" required></textarea></div>
+            <div class="campo"><label for="cupom">Cupom (opcional)</label><input id="cupom"
+                    placeholder="BEMVINDO, PROMO20 ou MENOS15"></div>
+            <div class="campo"><label><input id="fidelidade" type="checkbox" style="width:auto"> Cliente participa do
+                    clube de fidelidade (mais 5% de desconto)</label></div>
+            <button type="submit">Fechar compra</button>
+        </form>
+        <div id="resultado" class="resultado" aria-live="polite">Preencha os campos e clique em calcular.</div>
 
   <script type="module" src="ex05.js"></script>
 </body>
